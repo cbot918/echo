@@ -10,3 +10,13 @@ module echo
 // }
 
 // generic is not yet
+
+
+struct Store{
+	add fn()
+	minus fn()
+	print fn()
+}
+
+
+
