@@ -1,10 +1,18 @@
 module main
 
 import echo
+import net.http
 
+// User Controller Class
+pub fn hello(req http.Request) http.Response{
+	println("in hello")
+	return http.Response{}
+}
 
 fn main(){
-	mut e := echo.new_echo()
+	mut api := echo.new_echo()
 
-	e.run(8888)
+	api.get('/', hello )
+
+	api.run(8888)
 }
